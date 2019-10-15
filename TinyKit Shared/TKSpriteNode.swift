@@ -22,6 +22,7 @@ open class TKSpriteNode : TKNode {
         self.texture = TKTexture(imageNamed: self.imageName, mipmaped: false)
 //        self.texture = TKTexture()
         super.init()
+        self.name = imageNamed
     }
     
     public func allocate() {

@@ -11,10 +11,10 @@ import MetalKit
 
 class MeshManager {
     var device : MTLDevice
+    var meshes: [MTKMesh]
     
     init(device: MTLDevice) {
         self.device = device
+        self.meshes = []
     }
-    
-    
 }

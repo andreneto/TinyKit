@@ -25,20 +25,20 @@ class Renderer: NSObject, MTKViewDelegate {
     
     public let device: MTLDevice
     public let commandQueue: MTLCommandQueue
-    var dynamicUniformBuffer: MTLBuffer
+    
     var pipelineState: MTLRenderPipelineState
     var depthState: MTLDepthStencilState
     var samplerState: MTLSamplerState
     var vertexDescriptor: MTLVertexDescriptor
     var captureScope: MTLCaptureScope?
     
+//    Reusable buffer
+    var dynamicUniformBuffer: MTLBuffer
     let inFlightSemaphore = DispatchSemaphore(value: maxBuffersInFlight)
-    
     var uniformBufferOffset = 0
-    
     var uniformBufferIndex = 0
-    
     var uniforms: UnsafeMutablePointer<Uniforms>
+    
     
     var projectionMatrix: matrix_float4x4 = matrix_float4x4()
     
@@ -247,6 +247,7 @@ class Renderer: NSObject, MTKViewDelegate {
             
             //self.updateDynamicBufferState()
             uniforms[0].projectionMatrix = projectionMatrix
+            self.updateDynamicBufferState()
             self.updateGameState(view: view)
             
             /// Delay getting the currentRenderPassDescriptor until we absolutely need it to avoid
@@ -274,8 +275,6 @@ class Renderer: NSObject, MTKViewDelegate {
                     renderEncoder.setVertexSamplerState(self.samplerState, index: 0)
                     renderEncoder.setFragmentSamplerState(self.samplerState, index: 0)
                     
-                    renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
-                    renderEncoder.setFragmentBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
                     
                     if let tkView = view as? TKView, let scene = tkView.scene {
                         drawNodeRecursive(scene, parentTransform: matrix_identity_float4x4, commandEncoder: renderEncoder)
@@ -300,10 +299,19 @@ class Renderer: NSObject, MTKViewDelegate {
     func drawNodeRecursive(_ node: TKNode, parentTransform: simd_float4x4, commandEncoder: MTLRenderCommandEncoder) {
         let modelMatrix = parentTransform * node.transformMatrix
         if let node = node as? TKSpriteNode {
+//            print(node.transformMatrix)
             
             if let mesh = node.mesh, let texture = node.texture?.texture {
                 
-                uniforms[0].modelViewMatrix = modelMatrix
+                var uniformsData = Uniforms(projectionMatrix: self.projectionMatrix, modelViewMatrix: modelMatrix)
+                
+//                uniforms[0].modelViewMatrix = modelMatrix
+                commandEncoder.setVertexBytes(&uniformsData, length: MemoryLayout<Uniforms>.size, index: BufferIndex.uniforms.rawValue)
+//                commandEncoder.setFragmentBytes(&uniformsData, length: MemoryLayout<Uniforms>.size, index: BufferIndex.uniforms.rawValue)
+//                commandEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
+//                commandEncoder.setFragmentBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
+                
+                
                 for (index, element) in mesh.vertexDescriptor.layouts.enumerated() {
                     guard let layout = element as? MDLVertexBufferLayout else {
                         return
@@ -327,6 +335,8 @@ class Renderer: NSObject, MTKViewDelegate {
                 }
             }
         }
+        
+        
         
         for child in node.children {
             drawNodeRecursive(child, parentTransform: modelMatrix, commandEncoder: commandEncoder)
