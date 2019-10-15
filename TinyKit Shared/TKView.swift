@@ -27,7 +27,7 @@ public class TKView: MTKView {
         
         self.device = defaultDevice
 
-        guard let newRenderer = Renderer(metalKitView: self) else {
+        guard let newRenderer = Renderer(tkView: self) else {
             print("Renderer cannot be initialized")
             return
         }
@@ -50,7 +50,7 @@ public class TKView: MTKView {
         
         self.device = defaultDevice
 
-        guard let newRenderer = Renderer(metalKitView: self) else {
+        guard let newRenderer = Renderer(tkView: self) else {
             print("Renderer cannot be initialized")
             return
         }
