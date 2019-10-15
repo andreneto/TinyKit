@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ShaderTypes.h"
 
 //! Project version number for TinyKit.
 FOUNDATION_EXPORT double TinyKitVersionNumber;

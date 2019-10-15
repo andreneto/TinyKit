@@ -8,12 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		2C4627042352186600B053BD /* TinyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4627022352186600B053BD /* TinyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C4627652352282A00B053BD /* TKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46275F2352282A00B053BD /* TKNode.swift */; };
+		2C4627682352282A00B053BD /* TKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4627602352282A00B053BD /* TKView.swift */; };
+		2C46276B2352282A00B053BD /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4627612352282A00B053BD /* Renderer.swift */; };
+		2C46276E2352282A00B053BD /* MathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4627622352282A00B053BD /* MathUtils.swift */; };
+		2C4627712352282A00B053BD /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C4627632352282A00B053BD /* Shaders.metal */; };
+		2C46277723522A3100B053BD /* ShaderTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4627642352282A00B053BD /* ShaderTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C46277A235239D100B053BD /* TKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C462779235239D100B053BD /* TKScene.swift */; };
+		2C46277E23523A1E00B053BD /* TKTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46277D23523A1E00B053BD /* TKTexture.swift */; };
+		2C46278223523A5500B053BD /* TKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46278123523A5500B053BD /* TKSpriteNode.swift */; };
+		2C46278623523BED00B053BD /* TKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46278523523BED00B053BD /* TKColor.swift */; };
+		2C46279223523E1A00B053BD /* TKResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46279123523E1A00B053BD /* TKResponder.swift */; };
+		2C4627B8235268A700B053BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4627B7235268A700B053BD /* Assets.xcassets */; };
+		2C4627BA23526AAF00B053BD /* TKSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4627B923526AAF00B053BD /* TKSize.swift */; };
+		2C4627BC23526B0A00B053BD /* TKPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4627BB23526B0A00B053BD /* TKPoint.swift */; };
+		2CF536A62354ADC9003DD18B /* TextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF536A52354ADC9003DD18B /* TextureManager.swift */; };
+		2CF536A82354C385003DD18B /* MeshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF536A72354C385003DD18B /* MeshManager.swift */; };
+		2CF536CC2355091F003DD18B /* TKImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF536CB2355091F003DD18B /* TKImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C4626FF2352186600B053BD /* TinyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4627022352186600B053BD /* TinyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinyKit.h; sourceTree = "<group>"; };
 		2C4627032352186600B053BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C46275F2352282A00B053BD /* TKNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKNode.swift; sourceTree = "<group>"; };
+		2C4627602352282A00B053BD /* TKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKView.swift; sourceTree = "<group>"; };
+		2C4627612352282A00B053BD /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		2C4627622352282A00B053BD /* MathUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathUtils.swift; sourceTree = "<group>"; };
+		2C4627632352282A00B053BD /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		2C4627642352282A00B053BD /* ShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		2C462779235239D100B053BD /* TKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKScene.swift; sourceTree = "<group>"; };
+		2C46277D23523A1E00B053BD /* TKTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKTexture.swift; sourceTree = "<group>"; };
+		2C46278123523A5500B053BD /* TKSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKSpriteNode.swift; sourceTree = "<group>"; };
+		2C46278523523BED00B053BD /* TKColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKColor.swift; sourceTree = "<group>"; };
+		2C46279123523E1A00B053BD /* TKResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKResponder.swift; sourceTree = "<group>"; };
+		2C4627B7235268A700B053BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C4627B923526AAF00B053BD /* TKSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKSize.swift; sourceTree = "<group>"; };
+		2C4627BB23526B0A00B053BD /* TKPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKPoint.swift; sourceTree = "<group>"; };
+		2CF536A52354ADC9003DD18B /* TextureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureManager.swift; sourceTree = "<group>"; };
+		2CF536A72354C385003DD18B /* MeshManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshManager.swift; sourceTree = "<group>"; };
+		2CF536CB2355091F003DD18B /* TKImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +64,7 @@
 		2C4626F52352186600B053BD = {
 			isa = PBXGroup;
 			children = (
+				2C46273123521AD900B053BD /* TinyKit Shared */,
 				2C4627012352186600B053BD /* TinyKit */,
 				2C4627002352186600B053BD /* Products */,
 			);
@@ -52,6 +87,46 @@
 			path = TinyKit;
 			sourceTree = "<group>";
 		};
+		2C46273123521AD900B053BD /* TinyKit Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2C4627B4235262FF00B053BD /* Render */,
+				2C462778235233AB00B053BD /* Shaders */,
+				2C46275F2352282A00B053BD /* TKNode.swift */,
+				2C46278123523A5500B053BD /* TKSpriteNode.swift */,
+				2C4627602352282A00B053BD /* TKView.swift */,
+				2C462779235239D100B053BD /* TKScene.swift */,
+				2C46277D23523A1E00B053BD /* TKTexture.swift */,
+				2CF536CB2355091F003DD18B /* TKImage.swift */,
+				2C46278523523BED00B053BD /* TKColor.swift */,
+				2C4627B923526AAF00B053BD /* TKSize.swift */,
+				2C4627BB23526B0A00B053BD /* TKPoint.swift */,
+				2C46279123523E1A00B053BD /* TKResponder.swift */,
+				2C4627B7235268A700B053BD /* Assets.xcassets */,
+			);
+			path = "TinyKit Shared";
+			sourceTree = "<group>";
+		};
+		2C462778235233AB00B053BD /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				2C4627632352282A00B053BD /* Shaders.metal */,
+				2C4627642352282A00B053BD /* ShaderTypes.h */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		2C4627B4235262FF00B053BD /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				2C4627612352282A00B053BD /* Renderer.swift */,
+				2C4627622352282A00B053BD /* MathUtils.swift */,
+				2CF536A52354ADC9003DD18B /* TextureManager.swift */,
+				2CF536A72354C385003DD18B /* MeshManager.swift */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -60,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4627042352186600B053BD /* TinyKit.h in Headers */,
+				2C46277723522A3100B053BD /* ShaderTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +171,7 @@
 				TargetAttributes = {
 					2C4626FE2352186600B053BD = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -121,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4627B8235268A700B053BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +209,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF536CC2355091F003DD18B /* TKImage.swift in Sources */,
+				2CF536A62354ADC9003DD18B /* TextureManager.swift in Sources */,
+				2C4627652352282A00B053BD /* TKNode.swift in Sources */,
+				2C4627BA23526AAF00B053BD /* TKSize.swift in Sources */,
+				2C46279223523E1A00B053BD /* TKResponder.swift in Sources */,
+				2C46278223523A5500B053BD /* TKSpriteNode.swift in Sources */,
+				2C46276E2352282A00B053BD /* MathUtils.swift in Sources */,
+				2C4627BC23526B0A00B053BD /* TKPoint.swift in Sources */,
+				2C46276B2352282A00B053BD /* Renderer.swift in Sources */,
+				2CF536A82354C385003DD18B /* MeshManager.swift in Sources */,
+				2C46278623523BED00B053BD /* TKColor.swift in Sources */,
+				2C46277E23523A1E00B053BD /* TKTexture.swift in Sources */,
+				2C4627682352282A00B053BD /* TKView.swift in Sources */,
+				2C4627712352282A00B053BD /* Shaders.metal in Sources */,
+				2C46277A235239D100B053BD /* TKScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +352,7 @@
 		2C4627082352186600B053BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -270,12 +364,16 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.TinyKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvos appletvsimulator";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -283,6 +381,7 @@
 		2C4627092352186600B053BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -294,12 +393,15 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.TinyKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvos appletvsimulator";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
